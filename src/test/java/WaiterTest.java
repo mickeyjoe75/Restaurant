@@ -44,6 +44,6 @@ public class WaiterTest {
 //        Comparing the order1 object with known class Order against the first item in the Notepad ArrayList<Order>.
         assertEquals(order1.getClass(), waiter1.getNotepad().get(0).getClass());
     }
-    
+
 
 }
