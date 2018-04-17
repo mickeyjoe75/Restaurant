@@ -28,4 +28,10 @@ public class CustomerTest {
         assertEquals(90d, customer1.getWallet());
     }
 
+    @Test
+    public void canOrderItem(){
+        Order orderToCheck = customer1.placeOrder();
+        assertEquals(MenuItem.LETTUCE, orderToCheck.getMenuItem());
+    }
+
 }

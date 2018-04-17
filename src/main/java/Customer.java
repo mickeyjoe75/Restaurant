@@ -20,4 +20,9 @@ public class Customer {
         wallet -= cost;
     }
 
+    public Order placeOrder(){
+        Order order = new Order(1, 1, MenuItem.LETTUCE);
+        return order;
+    }
+
 }
