@@ -6,10 +6,12 @@ import static junit.framework.TestCase.assertEquals;
 public class CustomerTest {
 
     private Customer customer1;
+    private Table table1;
 
     @Before
     public void before(){
         customer1 = new Customer("Bob", 100.00);
+        table1 = new Table(1);
     }
 
     @Test
@@ -33,5 +35,25 @@ public class CustomerTest {
         Order orderToCheck = customer1.placeOrder();
         assertEquals(MenuItem.LETTUCE, orderToCheck.getMenuItem());
     }
+
+    @Test
+    public void hasTable() {
+        assertEquals(null, customer1.getTable());
+    }
+
+    @Test
+    public void canSetTable() {
+        customer1.setTable(table1);
+        assertEquals(1, customer1.getTable().getTableNumber());
+    }
+
+    @Test
+    public void customerPassesTableToOrder() {
+        table1.addCustomer(customer1);
+        Order order1 = customer1.placeOrder();
+        assertEquals(1, order1.getTable().getTableNumber());
+    }
+
+
 
 }

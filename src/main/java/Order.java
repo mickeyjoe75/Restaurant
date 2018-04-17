@@ -5,6 +5,7 @@ public class Order {
     private int orderId;
     private int quantity;
     private MenuItem menuItem;
+    private Table table;
 
     public Order(int quantity, MenuItem menuItem){
         // Create a random object and assign it to the orderID
@@ -13,6 +14,7 @@ public class Order {
         // Assign values from creator
         this.quantity = quantity;
         this.menuItem = menuItem;
+        this.table = null;
 
     }
 
@@ -28,4 +30,11 @@ public class Order {
         return this.menuItem;
     }
 
+    public Table getTable() {
+        return table;
+    }
+
+    public void setTable(Table table) {
+        this.table = table;
+    }
 }

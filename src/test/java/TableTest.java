@@ -29,9 +29,11 @@ public class TableTest {
     public void canAddCustomer(){
         table.addCustomer(customer);
         assertEquals("Joe", table.getCustomer().getName());
+        assertEquals(1, table.getCustomer().getTable().getTableNumber());
+        assertEquals(1, customer.getTable().getTableNumber());
     }
 
-    
+
 
 
 

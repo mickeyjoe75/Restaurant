@@ -31,4 +31,6 @@ public class Waiter {
     public void takeOrder(Customer customer){
         notepad.add(customer.placeOrder());
     }
+
+
 }

@@ -18,7 +18,10 @@ public class Table {
 
     public void addCustomer(Customer customer){
         this.customer = customer;
+        customer.setTable(this);
     }
+
+
 
 
 }

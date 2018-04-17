@@ -9,11 +9,13 @@ public class WaiterTest {
     private Order order1;
     private Customer customer1;
 
+
     @Before
     public void before() {
         waiter1 = new Waiter("Todd", 100.00);
         order1 = new Order(1, MenuItem.LASAGNE);
         customer1 = new Customer("Claire", 2000.00);
+
     }
 
     @Test
@@ -44,6 +46,8 @@ public class WaiterTest {
 //        Comparing the order1 object with known class Order against the first item in the Notepad ArrayList<Order>.
         assertEquals(order1.getClass(), waiter1.getNotepad().get(0).getClass());
     }
+
+
 
 
 }
