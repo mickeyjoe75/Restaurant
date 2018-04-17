@@ -21,7 +21,7 @@ public class Customer {
     }
 
     public Order placeOrder(){
-        Order order = new Order(1, 1, MenuItem.LETTUCE);
+        Order order = new Order(1, MenuItem.LETTUCE);
         return order;
     }
 

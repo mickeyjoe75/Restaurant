@@ -1,11 +1,16 @@
+import java.util.Random;
+
 public class Order {
 
     private int orderId;
     private int quantity;
     private MenuItem menuItem;
 
-    public Order(int orderId, int quantity, MenuItem menuItem){
-        this.orderId = orderId;
+    public Order(int quantity, MenuItem menuItem){
+        // Create a random object and assign it to the orderID
+        Random rand = new Random();
+        this.orderId = rand.nextInt(9999);
+        // Assign values from creator
         this.quantity = quantity;
         this.menuItem = menuItem;
 
