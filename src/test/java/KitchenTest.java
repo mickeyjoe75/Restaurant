@@ -30,5 +30,19 @@ public class KitchenTest {
         kitchen1.receiveOrdersToCook(waiter1);
         assertEquals(2, kitchen1.getOrdersToCook().size());
     }
+    @Test
+    public void canCookOrders() {
+        waiter1.takeOrder(order1);
+        waiter1.takeOrder(order2);
+        kitchen1.receiveOrdersToCook(waiter1);
+        kitchen1.cookOrders();
+        assertEquals(0,kitchen1.getOrdersToCook().size());
+        assertEquals(2,kitchen1.getDishesToServe().size());
+
+    }
+
+
+
+
 
 }

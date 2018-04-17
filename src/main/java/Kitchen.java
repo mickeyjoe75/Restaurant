@@ -21,5 +21,20 @@ public class Kitchen {
         ordersToCook = waiter.passOrders();
     }
 
+    public void cookOrders() {
+        for (Order order : ordersToCook
+             ) {
+            dishesToServe.add(new Dish(
+                    order.getOrderId(),
+                    order.getQuantity(),
+                    order.getMenuItem(),
+                    order.getTable()
+            ));
+        }
+        ordersToCook.clear();
+    }
+
+
+
 
 }
