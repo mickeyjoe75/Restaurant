@@ -24,6 +24,13 @@ public class Waiter {
         return this.notepad;
     }
 
+    public ArrayList<Order> passOrders() {
+        ArrayList<Order> ordersToPass = new ArrayList<Order>(getNotepad());
+        notepad.clear();
+        return ordersToPass;
+
+    }
+
     public void takeOrder(Order order) {
         notepad.add(order);
     }

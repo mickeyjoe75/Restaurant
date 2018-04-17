@@ -47,6 +47,14 @@ public class WaiterTest {
         assertEquals(order1.getClass(), waiter1.getNotepad().get(0).getClass());
     }
 
+    @Test
+    public void canPassOrders() {
+        waiter1.takeOrder(order1);
+        assertEquals(1, waiter1.passOrders().size());
+        assertEquals(0, waiter1.getNotepad().size());
+
+    }
+
 
 
 
