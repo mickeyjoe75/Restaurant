@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Kitchen {
+public class implements IServable Kitchen {
     private ArrayList<Order> ordersToCook;
     private ArrayList<Dish> dishesToServe;
 
